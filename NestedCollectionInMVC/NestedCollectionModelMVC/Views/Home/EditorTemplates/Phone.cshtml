@@ -1,0 +1,13 @@
+﻿@model NestedCollectionModelMVC.Models.Phone
+@using NestedCollectionModelMVC.Helper
+
+<div class="phoneNumber">
+    <p>
+        <label>Phone Number</label>
+        @Html.HiddenFor(x => x.Id)
+        @Html.TextBoxFor(x => x.CountryCode, new { placeholder = "country code" })
+        @Html.TextBoxFor(x => x.Number, new { placeholder = "contact number" })
+        @Html.HiddenFor(x => x.DeletePhone, new { @class = "mark-for-delete" })
+        @Html.RemoveLink("Remove", "div.phoneNumber", "input.mark-for-delete")
+    </p>
+</div>

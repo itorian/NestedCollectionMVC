@@ -1,0 +1,17 @@
+﻿@model NestedCollectionModelMVC.Models.Employee
+
+@Html.HiddenFor(x => x.Id)
+
+<p>
+    <label>Name</label>
+    @Html.TextBoxFor(x => x.Name, new { placeholder = "name" })
+</p>
+
+<p>
+    <label>Salary</label>
+    @Html.TextBoxFor(x => x.Salary, new { placeholder = "salary" })
+</p>
+
+<div id="phoneNumbers">
+    @Html.EditorFor(x => x.Phones)
+</div>
